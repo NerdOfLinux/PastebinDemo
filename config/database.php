@@ -3,7 +3,7 @@
 use Illuminate\Support\Str;
 
 // For Heroku
-$DATABASE_URL = parse_url(getenv("DATABASE_URL"));
+$DATABASE_URL = parse_url(getenv("DATABASE_URL") ?: "postgres://abc123:abc123@abc123:5432/abc123");
 
 return [
 
